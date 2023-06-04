@@ -4,7 +4,6 @@ app.controller('UserListController', function ($scope, $http) {
     // Fetch users from the mock API
     $http.get('https://645d505de01ac61058a21cb1.mockapi.io/users')
       .then(function (response) {
-        console.log(response.data);
         $scope.users = response.data;
         $scope.loading = false;
       })

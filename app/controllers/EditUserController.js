@@ -1,6 +1,5 @@
 app.controller('EditUserController', function ($scope, $http, $routeParams, $location) {
     $scope.user = {};
-    console.log($routeParams);
     // Fetch user details from the mock API
     $http.get('https://645d505de01ac61058a21cb1.mockapi.io/users/' + $routeParams.id)
       .then(function (response) {
