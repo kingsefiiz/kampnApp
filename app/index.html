@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="userApp">
+
+<head>
+  <title>User Management App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    .view-user {
+      padding: 20px;
+    }
+
+    .add-user {
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div ng-controller="UserController">
+    <nav>
+      <div class="nav-wrapper">
+
+        <a href="./" style="display: flex;" class="brand-logo">
+          <div style="max-width: 10%; display: flex;align-items: center;">
+            <img style="box-sizing: border-box;max-width: 100%;" src="./../assets/kp-kampn.png" alt="Logo kamp'n">
+          </div>
+          Kamp'n users
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#/users">Users</a></li>
+          <li><a href="#/add-user">Add User</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div ng-view></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="/kampnApp/app/app.js"></script>
+  <script src="/kampnApp/app/controllers/UserListController.js"></script>
+  <script src="/kampnApp/app/controllers/EditUserController.js"></script>
+  <script src="/kampnApp/app/controllers/ViewUserController.js"></script>
+  <script src="/kampnApp/app/controllers/AddUserController.js"></script>
+
+  <script>
+
+
+    app.controller('UserController', function ($location) {
+      var vm = this;
+      vm.navigateTo = function (path) {
+        $location.path(path);
+      };
+    });
+
+  </script>
+</body>
+
+</html>

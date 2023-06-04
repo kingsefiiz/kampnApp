@@ -1,0 +1,21 @@
+<div>
+    <h2>Add User</h2>
+
+    <form>
+        <div class="MuiFormControl-root">
+            <label class="MuiFormLabel-root">First Name</label>
+            <input class="MuiInputBase-root MuiInput-root" type="text" ng-model="newUser.firstName" placeholder="First Name">
+        </div>
+        <div class="MuiFormControl-root">
+            <label class="MuiFormLabel-root">Last Name</label>
+            <input class="MuiInputBase-root MuiInput-root" type="text" ng-model="newUser.lastName" placeholder="Last Name">
+        </div>
+        <div class="MuiFormControl-root">
+            <label class="MuiFormLabel-root">Email</label>
+            <input class="MuiInputBase-root MuiInput-root" type="text" ng-model="newUser.email" placeholder="Email">
+        </div>
+        <button class="waves-effect waves-light btn teal darken-1" ng-click="addUser()">Add user</button>
+        <a class="waves-effect waves-light btn" href="#">Back</a>
+    </form>
+
+</div>

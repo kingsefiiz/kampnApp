@@ -1,0 +1,31 @@
+<div>
+    <h2>Users</h2>
+
+    <div id="page-loading" ng-if="loading" style="display:flex; justify-self: end;">
+        <img style="margin:0 auto;" src="/kampnApp/assets/0_4Gzjgh9Y7Gu8KEtZ.gif" />
+      </div>
+    
+    <div ng-if="!loading">
+        <table class="MuiTable-root MuiTable-stickyHeader">
+            <thead>
+                <tr>
+                    <th class="MuiTableCell-root">Name</th>
+                    <th class="MuiTableCell-root">Email</th>
+                    <th class="MuiTableCell-root">Actions</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr ng-repeat="user in users">
+                    <td class="MuiTableCell-root">{{ user.firstName }} {{user.lastName}}</td>
+                    <td class="MuiTableCell-root">{{ user.email }}</td>
+                    <td class="MuiTableCell-root">
+                        <a class="waves-effect waves-light btn teal darken-1" href="#/user/{{user.id}}">View</a>
+                        <a class="waves-effect waves-light btn" href="#/edit-user/{{user.id}}">Edit</a>
+                        <a class="waves-effect waves-light btn red" ng-click="deleteUser(user)">Delete</a>
+                    </td>
+                </tr>
+            </tbody>    
+        </table>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div>
+  <div id="page-loading" ng-if="!user" style="display:flex; justify-self: end;">
+    <img style="margin:0 auto;" src="/kampnApp/assets/0_4Gzjgh9Y7Gu8KEtZ.gif" />
+  </div>
+
+  <div ng-if="user">
+
+    <h2>User Details</h2>
+
+    <div style="display: flex;flex-direction: row;">
+      <div style="display: flex;flex-direction: column;width: 70%;">
+        <div class="MuiFormControl-root">
+          <label class="MuiFormLabel-root">First Name</label>
+          <p>{{ user.firstName }}</p>
+        </div>
+        <div class="MuiFormControl-root">
+          <label class="MuiFormLabel-root">Last Name</label>
+          <p>{{ user.lastName }}</p>
+        </div>
+        <div class="MuiFormControl-root">
+          <label class="MuiFormLabel-root">Email</label>
+          <p>{{ user.email }}</p>
+        </div>
+      </div>
+
+      <div style="width: 30%;">
+        <img ng-if="user.id%2==0" style="max-width: 80%;"
+          src="https://img.freepik.com/vecteurs-premium/avatar-jeune-homme-souriant-homme-moustache-barbe-brune-cheveux-portant-pull-jaune-sweat-shirt-3d-vecteur-personnes-illustration-personnage-style-minimal-dessin-anime_365941-860.jpg"
+          alt="avatar-jeune-homme">
+          <img ng-if="user.id%2!=0" style="max-width: 80%;"
+          src="https://img.freepik.com/vecteurs-premium/3d-jeune-femme-avatar-heureux-sourire-figure-icone_313242-1241.jpg?w=2000"
+          alt="avatar-jeune-femme">
+      </div>
+    </div>
+
+
+
+
+    <a class="waves-effect waves-light btn" href="#">Back</a>
+  </div>
+
+</div>

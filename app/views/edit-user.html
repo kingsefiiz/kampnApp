@@ -1,0 +1,27 @@
+<div>
+    <div id="page-loading" ng-if="!user" style="display:flex; justify-self: end;">
+        <img style="margin:0 auto;" src="/kampnApp/assets/0_4Gzjgh9Y7Gu8KEtZ.gif" />
+    </div>
+
+    <div ng-if="user">
+        <h2>Edit User</h2>
+
+        <form>
+            <div class="MuiFormControl-root">
+                <label class="MuiFormLabel-root">First Name</label>
+                <input class="MuiInputBase-root MuiInput-root" type="text" ng-model="user.firstName"
+                    placeholder="First Name">
+            </div>
+            <div class="MuiFormControl-root">
+                <label class="MuiFormLabel-root">Last Name</label>
+                <input class="MuiInputBase-root MuiInput-root" type="text" ng-model="user.lastName"
+                    placeholder="Last Name">
+            </div>
+            <div class="MuiFormControl-root">
+                <label class="MuiFormLabel-root">Email</label>
+                <input class="MuiInputBase-root MuiInput-root" type="text" ng-model="user.email" placeholder="Email">
+            </div>
+            <button class="waves-effect waves-light btn" ng-click="updateUser()">Save Changes</button>
+        </form>
+    </div>
+</div>
