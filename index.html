@@ -5,6 +5,7 @@
   <title>Kamp'n Users</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="icon" type="image/png" href="assets/kp-kampn.png" />
   <style>
     .view-user {
       padding: 20px;
@@ -22,7 +23,7 @@
       <div class="nav-wrapper">
 
         <a href="./" style="display: flex;" class="brand-logo">
-          <div style="max-width: 10%; display: flex;align-items: center;">
+          <div style="max-width: 8%; display: flex;align-items: center;margin: .5rem;">
             <img style="box-sizing: border-box;max-width: 100%;" src="/assets/kp-kampn.png" alt="Logo kamp'n">
           </div>
           Kamp'n users
@@ -52,9 +53,8 @@
 
     app.controller('UserController', function ($location) {
       var vm = this;
-      console.log($location)
       vm.navigateTo = function (path) {
-        $location.path(path + "/app");
+        $location.path(path);
       };
     });
 
